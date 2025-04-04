@@ -1,0 +1,238 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #16222A 0%, #3A6073 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  /* Navigation */
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav > a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 8px 0;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  nav > a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9BD48C;
+    transition: width 0.3s ease;
+  }
+  
+  nav > a:hover::after {
+    width: 100%;
+  }
+  
+  /* Main Content Sections */
+  section {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  section:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Hero Section */
+  section:first-of-type {
+    text-align: center;
+    padding: 60px 30px;
+    background: linear-gradient(135deg, rgba(155, 212, 140, 0.2) 0%, rgba(155, 212, 140, 0.1) 100%);
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ffffff, #9BD48C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  section:first-of-type p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+  }
+  
+  section a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+  }
+  
+  section a img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Download CV Link Styling */
+  section a[download] {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #9BD48C 0%, #68A357 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(155, 212, 140, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  section a[download]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(155, 212, 140, 0.5);
+  }
+  
+  section a[download]::before {
+    content: '📄 ';
+    margin-right: 8px;
+  }
+  
+  section a[download]::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.8s ease;
+  }
+  
+  section a[download]:hover::after {
+    left: 100%;
+  }
+  
+  /* Education Section */
+  .education h2 {
+    color: #9BD48C;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+  }
+  
+  .education p {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #9BD48C;
+  }
+  
+  /* Interest Section */
+  .interest {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    background-color: rgba(155, 212, 140, 0.15);
+  }
+  
+  /* Interests List Section */
+  #interests ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  #interests li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  #interests li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #9BD48C;
+  }
+  
+  /* Contact Section */
+  .contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+    background-color: rgba(59, 89, 152, 0.1);
+  }
+  
+  .contacts br {
+    margin-bottom: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav > a {
+      display: block;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    section {
+      padding: 20px;
+    }
+    
+    section:first-of-type {
+      padding: 40px 20px;
+    }
+    
+    section a[download] {
+      padding: 10px 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+    
+    h1 {
+      font-size: 1.8rem;
+    }
+    
+    section:first-of-type p {
+      font-size: 1rem;
+    }
+    
+    .education h2 {
+      font-size: 1.4rem;
+    }
+  }
