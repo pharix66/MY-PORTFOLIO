@@ -14,3 +14,6 @@ HTML5
 CSS3 (with flexbox and CSS grid)
 Custom animations and transitions
 Mobile-first responsive design
+
+
+view live https://pharixportfolio.netlify.app/
